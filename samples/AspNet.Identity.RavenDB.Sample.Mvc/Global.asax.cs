@@ -36,7 +36,7 @@ namespace AspNet.Identity.RavenDB.Sample.Mvc
                     DefaultDatabase = RavenDefaultDatabase
                 }.Initialize();
 
-                store.DatabaseCommands.EnsureDatabaseExists(RavenDefaultDatabase);
+                store.DatabaseCommands.GlobalAdmin.EnsureDatabaseExists(RavenDefaultDatabase);
 
                 return store;
 

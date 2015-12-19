@@ -18,6 +18,7 @@ namespace AspNet.Identity.RavenDB.Tests.Stores
                 }
             };
 
+            store.Configuration.Storage.Voron.AllowOn32Bits = true;
             store.Initialize();
             store.RegisterListener(new NoStaleQueriesListener());
             // IndexCreation.CreateIndexes(typeof(RavenUser_Roles).Assembly, store);
